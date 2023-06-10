@@ -26,6 +26,7 @@ body {
 
 .page-container {
     width: 1200px;
+    background-color: #FFFFFF;;
 }
 
 .navigation-list {
@@ -123,14 +124,9 @@ body {
     color: #FFFFFF;
 }
 
-.featurtes {
-    background-color: #FFFFFF;
-}
-
 .featurtes-item:nth-child(odd) {
     background-color: rgba(131, 179, 211, 0.12);
 }
-
 
 .featurtes-list {
     list-style: none;
