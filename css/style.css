@@ -1,6 +1,6 @@
 @font-face {
     font-family: "PT Sans";
-    src: url(/2339653-sedona-37/fonts/ptsans-400.woff2);
+    src: url(..fonts/ptsans-400.woff2);
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "PT Sans";
-    src: url(/2339653-sedona-37/fonts/ptsans-700.woff2);
+    src: url(../fonts/ptsans-700.woff2);
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -19,12 +19,12 @@ body {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
-    color: rgba(51, 51, 51, 1);
+    color: #333333;
     margin: 0;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #F2F2F2;
 }
 
-.page-header {
+.page-container {
     width: 1200px;
 }
 
@@ -32,12 +32,12 @@ body {
     list-style: none;
 }
 
-.navigation-item a {
+.navigation-link {
     text-decoration: none;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1)
+    color: #000000;
 }
 
 .button {
@@ -45,29 +45,27 @@ body {
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 1);
+    color: #FFFFFF;
     text-transform: uppercase;
-    background-color: rgba(117, 97, 87, 1);
+    background-color: #756157;
 }
 
 
 
 .hero {
-    width: 1200px;
-    height: 485px;
-    background: url("/2339653-sedona-37/images/divider.svg") bottom no-repeat,
-        url("/2339653-sedona-37/images/index-hero-bcg.jpg") no-repeat;
+    min-height: 485px;
+    background: url("../images/divider.svg") bottom no-repeat,
+        url("../images/index-hero-bcg.jpg") no-repeat;
 
 }
 
 .hero-img {
     display: block;
-    text-align: center;
-    margin-left: 371px;
+    margin: 0 auto;
 }
 
 .advantages {
-    width: 1200px;
+    background-color: #FFFFFF;
 }
 
 .advantages-list {
@@ -78,8 +76,9 @@ body {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .advantages-descr {
@@ -93,7 +92,8 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
+    text-align: center;
 }
 
 .advantages-item-descr {
@@ -101,33 +101,70 @@ body {
     line-height: 21px;
 }
 
-.advantages-list li:nth-of-type(odd) {
-    background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-list li:nth-of-type(even) {
-    background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-list li.item-no-background {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.advantages-list li.advantages-item-extended {
-    background-color: rgba(130, 179, 211, 1);
-}
-
-.advantages-item-extended {
-    color: rgba(255, 255, 255, 1);
-}
-
-.advantages-item-extended h3 {
-    color: rgba(255, 255, 255, 1);
-}
-
 .advantages-item img {
     display: block;
 }
+
+.advantages-item {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item:nth-child(even) {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list li.advantages-item-extended {
+    color: #FFFFFF;
+    background-color: #82B3D3;
+}
+
+.advantages-item-extended h3 {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.featurtes {
+    background-color: #FFFFFF;
+}
+
+.featurtes-item:nth-child(odd) {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+
+.featurtes-list {
+    list-style: none;
+}
+
+.featurtes-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.featurtes-descr {
+    font-size: 22px;
+    line-height: 26px;
+
+}
+
+.featurtes-item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.featurtes-item-descr {
+    font-size: 18px;
+    line-height: 21px;
+}
+
 
 .hotel-search {
     width: 1200px;
@@ -138,8 +175,9 @@ body {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .hotel-search-descr {
@@ -155,8 +193,8 @@ body {
 .subscription {
     width: 1200px;
     height: 415px;
-    background: url(/2339653-sedona-37/images/subscribe-background.jpg) no-repeat;
-    color: rgba(255, 255, 255, 1);
+    background: url(../images/subscribe-background.jpg) no-repeat;
+    color: #FFFFFF;
 }
 
 .subscription-title {
@@ -164,6 +202,7 @@ body {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .subscription-button {
@@ -171,8 +210,8 @@ body {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(130, 179, 211, 1);
+    color: #FFFFFF;
+    background-color: #82B3D3;
 }
 
 .page-footer {
@@ -183,7 +222,7 @@ body {
     list-style: none;
 }
 
-.social-item a {
+.social-link {
     text-decoration: none;
 }
 
@@ -191,19 +230,20 @@ body {
     text-decoration: none;
     font-size: 40px;
     line-height: 40px;
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
 }
 
 .catalog-hero {
     width: 1200px;
-    color: rgba(255, 255, 255, 1);
-    background: url(/2339653-sedona-37/images/catalog-hero.jpg) no-repeat;
+    color: #FFFFFF;
+    background: url(../images/catalog-hero.jpg) no-repeat;
 }
 
 .catalog-title {
     font-size: 60px;
     line-height: 78px;
     font-weight: 700;
+    text-align: center;
 }
 
 .breadcrumbs {
@@ -220,6 +260,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
+    text-align: center;
 }
 
 .control {
@@ -228,7 +269,7 @@ body {
 }
 
 .filter-button {
-    background-color: rgba(130, 179, 211, 1);
+    background-color: #82B3D3;
 }
 
 .reset-button {
@@ -245,7 +286,7 @@ body {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
 }
 
 .display-button {
@@ -264,15 +305,16 @@ body {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
+    text-align: center;
 }
 
 .button-in-favourites {
-    background-color: rgba(130, 179, 211, 1);
+    background-color: #82B3D3;
 }
 
 .added-in-favourites {
-    background-color: rgba(125, 181, 79, 1);
+    background-color: #7DB54F;
 }
 
 .pagination {
@@ -281,23 +323,23 @@ body {
 
 .pagination-link {
     text-decoration: none;
-    color: rgba(255, 255, 255, 1);
+    color: #FFFFFF;
     display: block;
-    background-color: rgba(130, 179, 211, 1);
+    background-color: #82B3D3;
 }
 
 .pagination-current {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(242, 242, 242, 1);
+    color: #000000;
+    background-color: #F2F2F2;
 }
 
 .subscription-catalog {
-    width: 1200px;
-    height: 415px;
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(51, 51, 51, 1);
+    min-height: 415px;
+    background-color: #FFFFFF;
+    color: #333333;
 }
 
 .subscription-catalog .subscription-title {
-    color: rgba(0, 0, 0, 1)
+    color: #000000;
+    text-align: center;
 }
