@@ -24,24 +24,136 @@ body {
     background-color: #F2F2F2;
 }
 
+
+/*
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+*/
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .page-container {
     width: 1200px;
-    background-color: #FFFFFF;;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+
 }
+
+.page-header {
+    display: flex;
+    height: 64px;
+    margin: 0;
+}
+
+.logo img {
+    display: block;
+    margin: 0 44px 0 70px;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
 
 .navigation-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+
+
 }
 
 .navigation-link {
+
     text-decoration: none;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
     color: #000000;
+    margin: 0;
 }
 
-.button {
+.navigation-item {
+
+    margin: auto 32px auto 0;
+}
+
+.navigation-item:last-child {
+    margin-right: 0;
+}
+
+.navigation-user {
+    margin-right: 70px;
+}
+
+.navigation-user .navigation-item:first-child {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url(../images/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+    margin-right: 25px;
+
+}
+
+.navigation-user .navigation-item:nth-child(2) {
+    position: relative;
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url(../images/icons/heart-favorites.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 17px;
+    background-position: center;
+    margin-right: 32px;
+}
+
+.navigation-user .navigation-item:nth-child(2)::after {
+    content: '12';
+    position: absolute;
+    font-size: 10px;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #7DB54F;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    bottom: 10px;
+    left: 7px;
+}
+
+
+
+ .button {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 4px;
+    min-width: 160px;
+    min-height: 36px;
     text-decoration: none;
     font-size: 16px;
     line-height: 20px;
@@ -49,6 +161,7 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     background-color: #756157;
+
 }
 
 
@@ -160,7 +273,6 @@ body {
     font-size: 18px;
     line-height: 21px;
 }
-
 
 .hotel-search {
     width: 1200px;
