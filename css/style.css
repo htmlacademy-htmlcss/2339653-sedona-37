@@ -682,6 +682,10 @@ body {
     position: relative;
 }
 
+.control-input {
+    opacity:0;
+}
+
 .control::before {
     content: '';
     position: absolute;
@@ -692,6 +696,20 @@ body {
     left: -35px;
     top: 2px;
 }
+
+.control-input:hover + .control::before {
+    opacity: 0.6;
+}
+
+.control-input:focus + .control::before {
+    outline: 3px solid #83B3D3;
+}
+
+.control-input:active + .control::before {
+    outline: none;
+    opacity: 0.3;
+}
+
 
 .control-input:checked + .control::after {
     content: '';
@@ -723,6 +741,16 @@ body {
     border-radius: 50%;
     left: -30px;
     top: 7px;
+}
+
+/* Состояние установленного флажка у чекбоксов и радио кнопок при наведении*/
+
+.control-input:hover + .control::after {
+    opacity: 0.6;
+}
+
+.control-input:active + .control::after {
+    opacity: 0.6;
 }
 
 .control-input {
@@ -938,18 +966,13 @@ body {
     outline: 2px solid rgba(63, 94, 114, 1)
 }
 
-.cost-select:disabled {   color: rgba(0, 0, 0, 0.3);
+.cost-select:disabled {
+    color: rgba(0, 0, 0, 0.3);
     outline: 2px solid rgba(0, 0, 0, 0.3);
     background:
         url(../images/icons/chevron-disabled.svg) no-repeat 94%,
         #F2F2F2;
 }
-
-
-
-
-
-
 
 .search-option {
     padding: 0;
