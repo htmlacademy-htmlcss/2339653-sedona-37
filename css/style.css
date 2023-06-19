@@ -157,6 +157,8 @@ body {
     left: 8px;
 }
 
+
+/* Элементы класса "button" и их состояние*/
 .button {
     display: inline-block;
     text-align: center;
@@ -172,6 +174,19 @@ body {
     text-transform: uppercase;
     background-color: #756157;
 }
+
+.button:hover,
+.button:focus {
+    background-color: #615048;
+    outline: none;
+}
+
+.button:active {
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+
 
 .hero {
     min-height: 485px;
@@ -524,9 +539,9 @@ body {
 
 .subscription-button:hover,
 .subscription-button:focus,
-.subscription-button:active
-  {
-    background:  #68A2CA;
+.subscription-button:active {
+    background: #68A2CA;
+    outline: none;
 }
 
 .subscription-button:active {
@@ -541,6 +556,8 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/* Список иконок социальных сетей и их состояния */
 
 .social-list {
     min-width: 142px;
@@ -593,7 +610,6 @@ body {
 }
 
 .breadcrumbs {
-    /* Вопрос по реализации кликабельной иконки домика.  */
     list-style: none;
     margin: 0;
     margin-bottom: 40px;
@@ -772,7 +788,7 @@ body {
     margin-bottom: 46px;
 }
 
-/* Range */
+/* Полоса "Range" и её состояния */
 .range-scale {
     position: relative;
     height: 4px;
@@ -817,7 +833,7 @@ body {
 }
 
 
-
+/* Кнопки формы выбора гостиницы и их состояния*/
 
 .filter-buttons {
     margin-top: 56px;
@@ -833,8 +849,22 @@ body {
     border-radius: 4px;
     background-color: #82B3D3;
     margin-bottom: 32px;
-
 }
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
+    background: #68A2CA;
+}
+
+.filter-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-button:disabled {
+    background-color: #E5E5E5;
+}
+
 
 .reset-button {
     font-family: inherit;
@@ -842,11 +872,30 @@ body {
     border: none;
 }
 
+.reset-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(130, 179, 211, 0);
+}
+
+.reset-button:focus {
+    background-color: rgba(130, 179, 211, 0);
+    outline: 3px solid rgba(131, 179, 211, 1);
+}
+
+.reset-button:active {
+    outline: none;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+.reset-button:disabled {
+    outline: none;
+    color: rgba(255, 255, 255, 0.1)
+}
+
 .search-result-container {
     display: flex;
     padding: 50px 70px 40px;
     align-items: center;
-
 }
 
 .search-result-title {
@@ -860,11 +909,9 @@ body {
 }
 
 .cost-select {
-
     background:
         url(../images/icons/chevron.svg) no-repeat 94%,
         #F2F2F2;
-    ;
     margin-right: 70px;
 }
 
@@ -892,6 +939,8 @@ select[name="cost-level"] {
     display: flex;
     column-gap: 8px;
 }
+
+/* Кнопки (иконки) выбора отображения экрана*/
 
 .display-button {
     text-decoration: none;
@@ -974,7 +1023,6 @@ select[name="cost-level"] {
     margin-bottom: 16px;
 }
 
-
 .button.link-button-more {
     min-width: 140px;
 }
@@ -988,11 +1036,17 @@ select[name="cost-level"] {
     border: none;
 }
 
+/* Кнопка карточки "В Избранном" и её состояния */
 .added-in-favourites {
     min-width: 140px;
     background-color: #7DB54F;
     border: none;
     font-family: inherit;
+}
+
+.added-in-favourites:hover,
+.added-in-favourites:focus {
+   background-color: rgba(108, 158, 66, 1)
 }
 
 
