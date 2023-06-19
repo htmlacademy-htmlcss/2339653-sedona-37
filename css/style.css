@@ -77,6 +77,7 @@ body {
 .navigation {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -86,6 +87,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation-link {
@@ -293,6 +295,10 @@ body {
     justify-content: space-between;
 }
 
+.img-size-regulator {
+    width: 800px;
+}
+
 .advantages-item {
     background-color: rgba(131, 179, 211, 0.2);
 }
@@ -427,7 +433,8 @@ body {
 }
 
 .hotel-search-button {
-    min-width: 376px;
+    padding: 0 50px;
+    max-width: 592px;
     min-height: 52px;
     display: block;
     margin: 0 auto;
@@ -506,10 +513,11 @@ body {
 .field:focus {
     min-width: 455px;
     background: #E6E6E6;
-    border: 3px solid #83B3D3;
+    outline: 3px solid #83B3D3;
     border-radius: 4px;
     box-sizing: border-box;
-    padding-left: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .field:active {
@@ -640,6 +648,8 @@ body {
     background: url(../images/icons/breadcrumbs-house.svg) center 100% no-repeat;
 }
 
+/*  Форма выбора гостиницы с фильтрами */
+
 .catalog-filter {
     display: flex;
 }
@@ -655,17 +665,17 @@ body {
 }
 
 .catalog-filter-group {
+    position: relative;
     border: none;
     padding: 0;
     margin: 0;
-    min-width: 150px;
+    width: 150px;
     margin-right: 70px;
 }
 
 .catalog-filter-group:nth-child(2) {
     margin-right: 140px;
 }
-
 
 .catalog-filter-title {
     font-size: 20px;
@@ -676,6 +686,8 @@ body {
     margin-bottom: 32px;
 }
 
+/* Чекбоксы, радио кнопки и их состояния */
+
 .control {
     font-size: 18px;
     line-height: 23px;
@@ -683,14 +695,15 @@ body {
 }
 
 .control-input {
+    margin: 0 18px 0 0;
     opacity:0;
 }
 
 .control::before {
     content: '';
     position: absolute;
-    min-width: 20px;
-    min-height: 20px;
+    width: 20px;
+    height: 20px;
     background-color: #FFFFFF;
     border-radius: 4px;
     left: -35px;
@@ -714,8 +727,8 @@ body {
 .control-input:checked + .control::after {
     content: '';
     position: absolute;
-    min-width: 12.2px;
-    min-height: 10px;
+    width: 12.2px;
+    height: 10px;
     background: url(../images/icons/checkbox-checker.svg) no-repeat;
     border-radius: 50%;
     left: -31px;
@@ -725,8 +738,8 @@ body {
 .control-radio::before {
     content: '';
     position: absolute;
-    min-width: 20px;
-    min-height: 20px;
+    width: 20px;
+    height: 20px;
     background-color: #FFFFFF;
     border-radius: 50%;
     left: -35px;
@@ -735,15 +748,15 @@ body {
 .control-input:checked + .control-radio::after {
     content: '';
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
+    width: 10px;
+    height: 10px;
     background-color: #3F5E72;
     border-radius: 50%;
     left: -30px;
     top: 7px;
 }
 
-/* Состояние установленного флажка у чекбоксов и радио кнопок при наведении*/
+/* Состояния установленного флажка у чекбоксов и радио кнопок */
 
 .control-input:hover + .control::after {
     opacity: 0.6;
@@ -753,27 +766,24 @@ body {
     opacity: 0.6;
 }
 
-.control-input {
-    margin: 0 18px 0 0;
-}
 
+/* Класс для работы с полями ввода уровней цены и полосой "Range"*/
 .cost-filter {
-    min-width: 288px;
-    position: relative;
+    width: 288px;
 }
 
-.cost-filter .catalog-filter-group {
-    display: flex;
-}
-
+/* Стилизация поля ввода цены и его состояния*/
 .cost-input {
     width: 143px;
-    /* Вопрос, почему не работает min-width и min-height */
     height: 48px;
     border: none;
     border-radius: 4px 0 0 4px;
-    padding-left: 20px;
+    padding: 0 20px;
     position: relative;
+}
+
+.cost-input:focus {
+outline: 3px solid rgba(131, 179, 211, 1);
 }
 
 .min-cost-label::before {
@@ -933,17 +943,18 @@ body {
     line-height: 36px;
     text-transform: uppercase;
     color: #000000;
-    margin-right: 200px;
+    margin-right: auto;
 }
 
+/* Стилизация Select и его состояний */
 .cost-select {
     appearance: none;
     background:
         url(../images/icons/chevron.svg) no-repeat 94%,
-        #F2F2F2;
+        #FFFFFF;
     margin-right: 70px;
-    min-width: 292px;
-    min-height: 49px;
+    width: 292px;
+    height: 49px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     font-family: inherit;
@@ -951,7 +962,6 @@ body {
     line-height: 21px;
     color: #333333;
     padding-left: 18px;
-
 }
 
 .cost-select:hover {
@@ -978,21 +988,22 @@ body {
     padding: 0;
 }
 
+/* Кнопки (иконки) выбора отображения экрана*/
 .search-result-display {
+    width: 160px;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    column-gap: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
-
-/* Кнопки (иконки) выбора отображения экрана*/
 
 .display-button {
     text-decoration: none;
     display: block;
-    min-width: 48px;
-    min-height: 48px;
+    width: 48px;
+    height: 48px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     background: url(../images/icons/table-result.svg) no-repeat center;
@@ -1075,11 +1086,20 @@ body {
 
 .button-in-favourites {
     font-family: inherit;
-    min-width: 140px;
+    min-width: 140px; /* Почему с просто width растягивается*/
     font-size: 16px;
     line-height: 20px;
     background-color: #82B3D3;
     border: none;
+}
+
+.button-in-favourites:hover,
+.button-in-favourites:focus {
+    background-color: #68A2CA;
+}
+
+.button-in-favourites:active {
+    background-color: #82B3D3;
 }
 
 /* Кнопка карточки "В Избранном" и её состояния */
@@ -1095,7 +1115,11 @@ body {
     background-color: rgba(108, 158, 66, 1)
 }
 
+.added-in-favourites:active {
+    background-color: #7DB54F;
+}
 
+/* Стилизация рейтинга по звёздам и слова рейтинг в виде кнопки */
 .rating-container {
     display: flex;
     justify-content: space-between;
@@ -1110,7 +1134,7 @@ body {
     background: url(../images/icons/star.svg) center no-repeat;
 }
 
-.rating-button {
+.button.rating-button {
     min-width: 140px;
     margin: 0;
     font-weight: 400;
@@ -1118,8 +1142,10 @@ body {
     background-color: #F2F2F2;
 }
 
+/* Стилизация пагинации */
 .pagination-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     border-top: 1px solid #E6E6E6;
     padding: 40px 0 60px;
@@ -1131,10 +1157,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.pagination-item {
-    margin-right: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .pagination-link {
@@ -1195,4 +1219,5 @@ body {
 .subscription-catalog .field::placeholder {
     color: #000000;
     opacity: 0.6;
+
 }
