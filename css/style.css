@@ -452,15 +452,18 @@ body {
 
 .field-wrapper {
     width: 684px;
-    /* Почему с min ломается и инпут с кнопкой убегают по сторонам*/
     position: relative;
     margin: 0 auto;
 }
+
+/* Поле ввода секции подписки и его состояния */
 
 .field {
     font-family: inherit;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 700;
+    color: #000000;
     margin: 0;
     padding: 0;
     border: none;
@@ -471,12 +474,36 @@ body {
     padding-left: 20px;
     position: absolute;
     left: 0;
+    background: #F2F2F2;
+    outline: none;
 }
 
 .field::placeholder {
     color: #000000;
     opacity: 0.6;
 }
+
+.field:hover {
+    background: #E6E6E6;
+}
+
+
+.field:focus {
+    min-width: 455px;
+    background: #E6E6E6;
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 17px;
+}
+
+.field:active {
+    min-width: 452px;
+    background: #F2F2F2;
+    border: 2px solid #000000;
+}
+
+/* Кнопка формы подписки и её состояния*/
 
 .subscription-button {
     min-width: 232px;
@@ -494,6 +521,18 @@ body {
     position: absolute;
     right: 0;
 }
+
+.subscription-button:hover,
+.subscription-button:focus,
+.subscription-button:active
+  {
+    background:  #68A2CA;
+}
+
+.subscription-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 
 .page-footer {
     padding: 45px 0 35px;
