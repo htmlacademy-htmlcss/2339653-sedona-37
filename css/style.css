@@ -909,13 +909,11 @@ body {
 }
 
 .cost-select {
+    appearance: none;
     background:
         url(../images/icons/chevron.svg) no-repeat 94%,
         #F2F2F2;
     margin-right: 70px;
-}
-
-select[name="cost-level"] {
     min-width: 292px;
     min-height: 49px;
     border: 2px solid #E5E5E5;
@@ -925,8 +923,33 @@ select[name="cost-level"] {
     line-height: 21px;
     color: #333333;
     padding-left: 18px;
-    appearance: none;
+
 }
+
+.cost-select:hover {
+    outline: 2px solid rgba(104, 162, 202, 1);
+}
+
+.cost-select:focus {
+    outline: 2px solid rgba(104, 162, 202, 1);
+}
+
+.cost-select:active {
+    outline: 2px solid rgba(63, 94, 114, 1)
+}
+
+.cost-select:disabled {   color: rgba(0, 0, 0, 0.3);
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+    background:
+        url(../images/icons/chevron-disabled.svg) no-repeat 94%,
+        #F2F2F2;
+}
+
+
+
+
+
+
 
 .search-option {
     padding: 0;
@@ -1046,7 +1069,7 @@ select[name="cost-level"] {
 
 .added-in-favourites:hover,
 .added-in-favourites:focus {
-   background-color: rgba(108, 158, 66, 1)
+    background-color: rgba(108, 158, 66, 1)
 }
 
 
