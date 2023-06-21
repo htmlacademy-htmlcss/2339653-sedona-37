@@ -1058,6 +1058,16 @@ background-color: #E6E6E6;;
     border: 2px solid #000000;
 }
 
+/* Вопрос: Имеет ли смысл прописывать состояние для :active? */
+.display-button:focus {
+    outline: none;
+    border-color: #68A2CA;;
+}
+
+.display-button:hover {
+    border-color: #000000;
+}
+
 .cards-container {
     padding: 0 70px;
 }
