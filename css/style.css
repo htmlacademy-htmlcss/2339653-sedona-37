@@ -616,6 +616,19 @@ body {
     margin-right: 70px;
 }
 
+.link-to-academy:hover {
+        fill: #756157;
+}
+
+.link-to-academy:focus {
+    fill: #756157;
+    outline: none;
+}
+
+.link-to-academy:active {
+    fill: rgba(117, 97, 87, 0.3);
+}
+
 .logo-academy {
     display: block;
 }
