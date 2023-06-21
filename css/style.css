@@ -188,8 +188,6 @@ body {
     color: rgba(255, 255, 255, 0.3)
 }
 
-
-
 .hero {
     min-height: 485px;
     background:
@@ -509,7 +507,6 @@ body {
     background: #E6E6E6;
 }
 
-
 .field:focus {
     min-width: 455px;
     background: #E6E6E6;
@@ -518,12 +515,6 @@ body {
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.field:active {
-    min-width: 452px;
-    background: #F2F2F2;
-    border: 2px solid #000000;
 }
 
 /* Кнопка формы подписки и её состояния*/
@@ -860,16 +851,17 @@ outline: 3px solid rgba(131, 179, 211, 1);
     right: 0;
 }
 
-
 .range-toggle:hover {
-    background-color: #dbb590;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:active,
 .range-toggle:focus {
-    outline: 3px solid #dbb590;
+    outline: 3px solid #83B3D3;
 }
 
+.range-toggle:active{
+    outline: 2px solid #83B3D3;
+}
 
 /* Кнопки формы выбора гостиницы и их состояния*/
 
@@ -975,7 +967,7 @@ outline: 3px solid rgba(131, 179, 211, 1);
 .cost-select:active {
     outline: 2px solid rgba(63, 94, 114, 1)
 }
-
+/* Вопрос: Или лучше просто через opacity: 0.3 ? */
 .cost-select:disabled {
     color: rgba(0, 0, 0, 0.3);
     outline: 2px solid rgba(0, 0, 0, 0.3);
