@@ -572,6 +572,20 @@ body {
 .social-link {
     display: block;
     text-decoration: none;
+    fill: #83B3D3;
+}
+
+.social-link:hover {
+    fill: #68A2CA;
+}
+
+.social-link:focus {
+    outline: none;
+    fill: #68A2CA;
+}
+
+.social-link:active {
+   fill: rgba(104, 162, 202, 0.3);
 }
 
 .phone-link {
@@ -580,6 +594,20 @@ body {
     font-size: 40px;
     line-height: 40px;
     color: #000000;
+}
+
+.phone-link:hover {
+    color: #756157;
+
+}
+
+.phone-link:focus {
+    color: #756157;
+    outline: none;
+}
+
+.phone-link:active {
+    color: rgba(117, 97, 87, 0.3);
 }
 
 .link-to-academy {
@@ -765,16 +793,26 @@ body {
 
 /* Стилизация поля ввода цены и его состояния*/
 .cost-input {
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
     width: 143px;
     height: 48px;
+    background-color: #F2F2F2;
     border: none;
     border-radius: 4px 0 0 4px;
     padding: 0 20px;
     position: relative;
 }
 
+.cost-input:hover {
+    background-color: #E6E6E6;
+    }
+
 .cost-input:focus {
 outline: 3px solid rgba(131, 179, 211, 1);
+background-color: #E6E6E6;;
 }
 
 .min-cost-label::before {
@@ -803,14 +841,6 @@ outline: 3px solid rgba(131, 179, 211, 1);
     border-radius: 0 4px 4px 0;
     position: absolute;
     left: 145px;
-}
-
-.cost-filter input[type="text"] {
-    font-family: inherit;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    background: #F2F2F2;
 }
 
 .cost-filter-wrapper {
