@@ -588,6 +588,7 @@ body {
    fill: rgba(104, 162, 202, 0.3);
 }
 
+/* Стилизация номера телефона и его состояний*/
 .phone-link {
     display: block;
     text-decoration: none;
@@ -610,6 +611,7 @@ body {
     color: rgba(117, 97, 87, 0.3);
 }
 
+/* Стилизация логотипа (ссылки) академии HTML и его состояния */
 .link-to-academy {
     display: block;
     align-items: baseline;
@@ -1177,7 +1179,7 @@ background-color: #E6E6E6;;
     background-color: #F2F2F2;
 }
 
-/* Стилизация пагинации */
+/* Стилизация пигинации и её состояний*/
 .pagination-container {
     display: flex;
     flex-wrap: wrap;
@@ -1210,7 +1212,27 @@ background-color: #E6E6E6;;
 
 }
 
+.pagination-link:hover {
+    background-color: #68A2CA;
+}
+.pagination-link:focus {
+    background-color: #68A2CA;
+    outline: none;
+}
+
+.pagination-link:active {
+    background-color: #82B3D3;
+    color:rgba(255, 255, 255, 0.3);
+}
+
 .pagination-current {
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.pagination-current:hover,
+.pagination-current:focus
+ {
     color: #000000;
     background-color: #F2F2F2;
 }
