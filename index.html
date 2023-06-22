@@ -184,14 +184,22 @@
             <button class="modal-close-button" type="button">
               <span class="visually-hidden">Закрыть</span>
             </button>
-            <label class="input-label-date" for="input-arrival-date">Дата заезда:
-              <input class="modal-input-date" type="date" id="input-arrival-date" name="nput-arrival-date">
-            </label>
-            <p class="input-information">Мы не можем отправить вас в прошлое.</p>
-            <label class="input-label-date" for="input-departure-date">Дата выезда:
-              <input class="modal-input-date" type="date" id="input-departure-date" name="nput-departure-date">
-            </label>
-            <p class="input-information">На эти даты есть свободные номера. Пока есть.</p>
+
+            <div class="input-date-container">
+              <div class="input-date-internal-container">
+                <label class="input-label-date" for="input-arrival-date">Дата заезда:</label>
+                <input class="modal-input-date" type="date" id="input-arrival-date" name="nput-arrival-date" value="2020-04-27">
+              </div>
+              <p class="input-information error-date">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="input-date-container">
+              <div class="input-date-internal-container">
+                <label class="input-label-date" for="input-departure-date">Дата выезда:</label>
+                <input class="modal-input-date" type="date" id="input-departure-date" name="nput-departure-date" value="2023-09-01">
+              </div>
+              <p class="input-information">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+
             <div class="guest-selection-container">
               <div class="guest-selection guest-selection-adults">
                 <label class="input-number-guest" for="input-number-adults">Взрослые: </label>

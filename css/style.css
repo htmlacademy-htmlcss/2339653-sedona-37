@@ -1294,6 +1294,7 @@ body {
 }
 
 .modal-container {
+
     display: flex;
     position: fixed;
     top: 0;
@@ -1304,6 +1305,10 @@ body {
 }
 
 .modal-window {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
     margin: auto;
     width: 717px;
     padding: 64px 70px;
@@ -1347,6 +1352,57 @@ body {
     right: -16px;
 }
 
+.input-date-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.input-date-internal-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.input-label-date {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+    margin: auto;
+}
+
+.modal-input-date {
+    width: 440px;
+    padding: 12px 20px;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 4px;
+    background:
+        url(../images/icons/input-date-icon.svg) no-repeat 95% 50%,
+        #F2F2F2;
+}
+
+.modal-input-date::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.input-information {
+    font-weight: 400;
+    margin: 0 0 0 157px ;
+    padding: 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.error-date {
+    color: #FF5757;
+}
 
 
 
