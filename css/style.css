@@ -1301,7 +1301,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(242, 242, 242, 0.80);
-
 }
 
 .modal-window {
@@ -1314,17 +1313,50 @@ body {
 }
 
 .modal-window-search {
+    margin: 0;
+    padding: 0;
+    position: relative;
     border: none;
     display: flex;
     flex-direction: column;
 }
 
 .modal-window-title {
+    margin: 0;
+    margin-bottom: 64px;
+    padding: 0;
+    display: inline-block;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
 }
+
+.modal-close-button {
+    margin: 0;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background-image: url(../images/icons/close-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px;
+    right: -16px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .modal-tooltip {
     display: none;
