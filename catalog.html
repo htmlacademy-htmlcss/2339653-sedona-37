@@ -42,7 +42,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button" href="#">Хочу сюда!</a>
+              <a class="button modal-window-open" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -375,6 +375,65 @@
         </a>
       </footer>
     </div>
+    <div class="modal-container">
+      <div class="modal-window">
+        <form action="https://echo.htmlacademy.ru/" method="post" class="modal-window-form">
+          <fieldset class="modal-window-search">
+            <legend class="modal-window-title">Поиск гостиницы в Седоне</legend>
+            <button class="modal-close-button" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+
+            <div class="input-date-container">
+              <div class="input-date-internal-container">
+                <label class="input-label-date" for="input-arrival-date">Дата заезда:</label>
+                <input class="modal-input-date" type="text" id="input-arrival-date" name="nput-arrival-date"
+                  placeholder="Укажите дату">
+              </div>
+              <p class="input-information-error error-date">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="input-date-container">
+              <div class="input-date-internal-container">
+                <label class="input-label-date" for="input-departure-date">Дата выезда:</label>
+                <input class="modal-input-date" type="text" id="input-departure-date" name="nput-departure-date"
+                placeholder="Укажите дату">
+              </div>
+              <p class="input-information-error">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+
+            <div class="guest-selection-container">
+              <div class="guest-selection guest-selection-adults">
+                <label class="input-number-guest-title" for="input-number-adults">Взрослые: </label>
+                <input class="modal-input-number" type="text" id="input-number-adults" value="2">
+                <button class="button-decrease-guest"><span class="visually-hidden">Меньше</span></button>
+                <button class="button-increase-guest"><span class="visually-hidden">Больше</span></button>
+              </div>
+
+              <div class="guest-selection guest-selection-kids">
+                <span class="input-number-guest">
+                <label class="input-number-guest-title" for="input-number-kids">Дети:</label>
+                <span class="tolltip-place">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tolltip-svg" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                      </svg>
+
+                  </button>
+                </span>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <input class="modal-input-number" type="text" id="input-number-kids" value="2">
+                <button class="button-decrease-guest"><span class="visually-hidden">Меньше</span></button>
+                <button class="button-increase-guest"><span class="visually-hidden">Больше</span></button>
+              </div>
+            </div>
+            <button class="modal-submit-button" type="submit">Найти</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 
 </html>
