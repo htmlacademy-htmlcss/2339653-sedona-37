@@ -664,6 +664,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     font-size: 16px;
     position: relative;
     align-items: center;
@@ -678,6 +679,10 @@ body {
     left: 23.3px;
     bottom: 4px;
 }
+.breadcrumbs-link {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .breadcrumbs-link-to-main {
     display: block;
@@ -687,6 +692,27 @@ body {
     height: 12px;
     background: url(../images/icons/breadcrumbs-house.svg) center 100% no-repeat;
 }
+
+/* Состояния хлебных крошек*/
+.breadcrumbs-item:hover,
+.breadcrumbs-item:hover + .breadcrumbs-item::before
+ {
+    opacity: 0.6;
+}
+
+.breadcrumbs-link:focus
+ {
+    outline: none;
+}
+
+.breadcrumbs-item:active,
+.breadcrumbs-item:active + .breadcrumbs-item::before
+ {
+    opacity: 0.3;
+}
+
+
+
 
 /*  Форма выбора гостиницы с фильтрами */
 
