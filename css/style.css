@@ -679,6 +679,7 @@ body {
     left: 23.3px;
     bottom: 4px;
 }
+
 .breadcrumbs-link {
     text-decoration: none;
     color: #ffffff;
@@ -695,19 +696,16 @@ body {
 
 /* Состояния хлебных крошек*/
 .breadcrumbs-item:hover,
-.breadcrumbs-item:hover + .breadcrumbs-item::before
- {
+.breadcrumbs-item:hover + .breadcrumbs-item::before {
     opacity: 0.6;
 }
 
-.breadcrumbs-link:focus
- {
+.breadcrumbs-link:focus {
     outline: none;
 }
 
 .breadcrumbs-item:active,
-.breadcrumbs-item:active + .breadcrumbs-item::before
- {
+.breadcrumbs-item:active + .breadcrumbs-item::before {
     opacity: 0.3;
 }
 
@@ -1338,7 +1336,7 @@ body {
     height: 100%;
     background-color: rgba(242, 242, 242, 0.80);
     display: none;
-   }
+}
 
 .modal-window {
     font-size: 20px;
@@ -1586,7 +1584,7 @@ body {
 }
 
 .button-decrease-guest:active,
-.button-increase-guest:focus {
+.button-increase-guest:active {
     outline: none;
 }
 
