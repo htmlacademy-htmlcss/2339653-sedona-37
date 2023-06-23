@@ -120,6 +120,10 @@ body {
     margin-right: 70px;
 }
 
+.navigation-user .navigation-item {
+    cursor: pointer;
+}
+
 .navigation-user .navigation-item:first-child {
     width: 20px;
     height: 20px;
@@ -175,6 +179,7 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     background-color: #756157;
+    cursor: pointer;
 }
 
 .button:hover,
@@ -534,6 +539,7 @@ body {
     margin: 0;
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
 
 .subscription-button:hover,
@@ -726,6 +732,7 @@ body {
     font-size: 18px;
     line-height: 23px;
     position: relative;
+    cursor: pointer;
 }
 
 .control-input {
@@ -1000,6 +1007,7 @@ body {
     line-height: 21px;
     color: #333333;
     padding-left: 18px;
+    cursor: pointer;
 }
 
 .cost-select:hover {
@@ -1191,6 +1199,7 @@ body {
     font-weight: 400;
     color: #333333;
     background-color: #F2F2F2;
+    cursor: default;
 }
 
 /* Стилизация пигинации и её состояний*/
@@ -1302,7 +1311,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(242, 242, 242, 0.80);
-}
+   }
 
 .modal-window {
     font-size: 20px;
@@ -1353,6 +1362,7 @@ body {
     position: absolute;
     top: -100px;
     right: -18px;
+    cursor: pointer;
 }
 
 .modal-close-button:hover {
@@ -1406,6 +1416,7 @@ body {
         url(../images/icons/input-date-icon.svg) no-repeat 95% 50%,
         #F2F2F2;
     outline: none;
+    position: relative;
 }
 
 .modal-input-date::placeholder {
@@ -1479,6 +1490,7 @@ body {
     top: 14px;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .button-decrease-guest::after {
@@ -1499,6 +1511,7 @@ body {
     top: 14px;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .button-increase-guest::after {
@@ -1520,9 +1533,10 @@ body {
     top: 10px;
     transform: rotate(90deg);
 }
+
 /* Состояния для кнопок '-' '+'  */
 .button-decrease-guest:hover::after,
-.button-decrease-guest:focus::after  {
+.button-decrease-guest:focus::after {
     border: 1px solid #000000;
 }
 
@@ -1541,7 +1555,7 @@ body {
 .button-decrease-guest:active::after,
 .button-increase-guest:active::after,
 .button-increase-guest:active::before {
-border: 1px solid rgba(117, 97, 87, 0.3);
+    border: 1px solid rgba(117, 97, 87, 0.3);
 }
 
 .button-decrease-guest:active,
@@ -1627,7 +1641,8 @@ border: 1px solid rgba(117, 97, 87, 0.3);
     padding: 18px;
     border: none;
     border-radius: 10px;
-    background-color: #83B3D3
+    background-color: #83B3D3;
+    cursor: pointer;
 }
 
 .modal-submit-button:hover {
