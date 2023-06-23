@@ -1317,7 +1317,9 @@ body {
     box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
+
 .modal-window-search {
+    min-width: 577px;
     margin: 0;
     padding: 0;
     position: relative;
@@ -1350,7 +1352,7 @@ body {
     background-repeat: no-repeat;
     position: absolute;
     top: -100px;
-    right: -14px;
+    right: -18px;
 }
 
 .modal-close-button:hover {
@@ -1362,12 +1364,13 @@ body {
     outline: 3px solid #83B3D3;
 }
 
-.modal-close-button:active  {
+.modal-close-button:active {
     outline: none;
     background-color: #E6E6E6;
     opacity: 0.3;
 }
 
+/* Поля ввода дат и их состояния */
 .input-date-container {
     display: flex;
     flex-direction: column;
@@ -1382,12 +1385,12 @@ body {
 }
 
 .input-label-date {
-
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
     text-transform: capitalize;
     margin: 0;
+    margin-right: auto;
 }
 
 .modal-input-date {
@@ -1402,13 +1405,24 @@ body {
     background:
         url(../images/icons/input-date-icon.svg) no-repeat 95% 50%,
         #F2F2F2;
+    outline: none;
 }
 
-.modal-input-date::-webkit-calendar-picker-indicator {
-    opacity: 0;
+.modal-input-date::placeholder {
+    color: #000000;
+    opacity: 0.6;
 }
 
-.input-information {
+.modal-input-date:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-input-date:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.input-information-error {
     font-weight: 400;
     margin: 0 0 0 157px;
     padding: 0;
@@ -1421,6 +1435,7 @@ body {
     color: #FF5757;
 }
 
+/* Поля для ввода колличества гостей*/
 .guest-selection-container {
     display: flex;
     margin-bottom: 48px;
@@ -1452,42 +1467,38 @@ body {
     border: none;
     border-radius: 4px;
     background-color: #F2F2F2;
+    outline: none;
 }
 
-/* Кнопки '-' '+' и их состояния */
+/* Кнопкa '-' */
 .button-decrease-guest {
-    width: 40px;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    left: 137px;
+    left: 146px;
+    top: 14px;
     border: none;
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
 }
 
 .button-decrease-guest::after {
     content: '';
-    display: inline-block;
+    width: 14px;
+    border: 1px solid rgba(117, 97, 87, 0.3);
+    position: absolute;
+    left: 3px;
+    top: 9px
+}
+
+/* Кнопка '+' */
+.button-increase-guest {
     width: 20px;
     height: 20px;
-    border: 1px solid rgba(117, 97, 87, 0.3);
-    border-radius: 4px;
     position: absolute;
-    left: 12px;
-    outline: 3px solid red;
-    outline-offset: 8px;
-}
-
-.button-decrease-guest:hover::after {
-    border: 1px solid #000000;
-}
-
-.button-increase-guest {
-    width: 40px;
-    height: 100%;
-    position: absolute;
-    right: 0;
+    right: 8px;
+    top: 14px;
     border: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px;
 }
 
 .button-increase-guest::after {
@@ -1496,7 +1507,7 @@ body {
     width: 14px;
     border: 1px solid rgba(117, 97, 87, 0.3);
     position: absolute;
-    left: 12px;
+    left: 3px;
 }
 
 .button-increase-guest::before {
@@ -1505,19 +1516,43 @@ body {
     width: 14px;
     border: 1px solid rgba(117, 97, 87, 0.3);
     position: absolute;
-    left: 12px;
+    left: 3px;
+    top: 10px;
     transform: rotate(90deg);
 }
-
-.button-increase-guest:hover::after,
-.button-increase-guest:hover::before {
+/* Состояния для кнопок '-' '+'  */
+.button-decrease-guest:hover::after,
+.button-decrease-guest:focus::after  {
     border: 1px solid #000000;
 }
 
+.button-decrease-guest:focus,
+.button-increase-guest:focus {
+    outline: 3px solid #82B3D3;
+}
+
+.button-increase-guest:hover::after,
+.button-increase-guest:hover::before,
+.button-increase-guest:focus::after,
+.button-increase-guest:focus::before {
+    border: 1px solid #000000;
+}
+
+.button-decrease-guest:active::after,
+.button-increase-guest:active::after,
+.button-increase-guest:active::before {
+border: 1px solid rgba(117, 97, 87, 0.3);
+}
+
+.button-decrease-guest:active,
+.button-increase-guest:focus {
+    outline: none;
+}
+
+/* Расстояние между инпутом и тултипом */
 .guest-selection-kids .input-number-guest-title {
     margin-right: 10px;
 }
-
 
 /* Тултип */
 .input-number-guest {
@@ -1592,5 +1627,19 @@ body {
     padding: 18px;
     border: none;
     border-radius: 10px;
-    background-color: #83B3D3;
+    background-color: #83B3D3
+}
+
+.modal-submit-button:hover {
+    background-color: #68A2CA;
+}
+
+.modal-submit-button:focus {
+    background-color: #68A2CA;
+    outline: none;
+}
+
+.modal-submit-button:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.3);
 }
