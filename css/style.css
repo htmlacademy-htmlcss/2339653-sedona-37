@@ -77,6 +77,7 @@ body {
 .navigation {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -86,6 +87,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation-link {
@@ -116,6 +118,10 @@ body {
 
 .navigation-user {
     margin-right: 70px;
+}
+
+.navigation-user .navigation-item {
+    cursor: pointer;
 }
 
 .navigation-user .navigation-item:first-child {
@@ -157,6 +163,8 @@ body {
     left: 8px;
 }
 
+
+/* Класс "button" и его состояния*/
 .button {
     display: inline-block;
     text-align: center;
@@ -171,6 +179,18 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     background-color: #756157;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #615048;
+    outline: none;
+}
+
+.button:active {
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3)
 }
 
 .hero {
@@ -276,6 +296,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.img-size-regulator {
+    width: 800px;
 }
 
 .advantages-item {
@@ -412,7 +436,8 @@ body {
 }
 
 .hotel-search-button {
-    min-width: 376px;
+    padding: 0 50px;
+    max-width: 592px;
     min-height: 52px;
     display: block;
     margin: 0 auto;
@@ -452,15 +477,18 @@ body {
 
 .field-wrapper {
     width: 684px;
-    /* Почему с min ломается и инпут с кнопкой убегают по сторонам*/
     position: relative;
     margin: 0 auto;
 }
+
+/* Поле ввода секции подписки и его состояния */
 
 .field {
     font-family: inherit;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 700;
+    color: #000000;
     margin: 0;
     padding: 0;
     border: none;
@@ -471,12 +499,30 @@ body {
     padding-left: 20px;
     position: absolute;
     left: 0;
+    background: #F2F2F2;
+    outline: none;
 }
 
 .field::placeholder {
     color: #000000;
     opacity: 0.6;
 }
+
+.field:hover {
+    background: #E6E6E6;
+}
+
+.field:focus {
+    min-width: 455px;
+    background: #E6E6E6;
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Кнопка формы подписки и её состояния*/
 
 .subscription-button {
     min-width: 232px;
@@ -493,7 +539,20 @@ body {
     margin: 0;
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
+
+.subscription-button:hover,
+.subscription-button:focus,
+.subscription-button:active {
+    background: #68A2CA;
+    outline: none;
+}
+
+.subscription-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 
 .page-footer {
     padding: 45px 0 35px;
@@ -502,6 +561,8 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/* Список иконок социальных сетей и их состояния */
 
 .social-list {
     min-width: 142px;
@@ -517,8 +578,23 @@ body {
 .social-link {
     display: block;
     text-decoration: none;
+    fill: #83B3D3;
 }
 
+.social-link:hover {
+    fill: #68A2CA;
+}
+
+.social-link:focus {
+    outline: none;
+    fill: #68A2CA;
+}
+
+.social-link:active {
+    fill: rgba(104, 162, 202, 0.3);
+}
+
+/* Стилизация номера телефона и его состояний*/
 .phone-link {
     display: block;
     text-decoration: none;
@@ -527,10 +603,38 @@ body {
     color: #000000;
 }
 
+.phone-link:hover {
+    color: #756157;
+
+}
+
+.phone-link:focus {
+    color: #756157;
+    outline: none;
+}
+
+.phone-link:active {
+    color: rgba(117, 97, 87, 0.3);
+}
+
+/* Стилизация логотипа (ссылки) академии HTML и его состояния */
 .link-to-academy {
     display: block;
     align-items: baseline;
     margin-right: 70px;
+}
+
+.link-to-academy:hover {
+    fill: #756157;
+}
+
+.link-to-academy:focus {
+    fill: #756157;
+    outline: none;
+}
+
+.link-to-academy:active {
+    fill: rgba(117, 97, 87, 0.3);
 }
 
 .logo-academy {
@@ -554,13 +658,13 @@ body {
 }
 
 .breadcrumbs {
-    /* Вопрос по реализации кликабельной иконки домика.  */
     list-style: none;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     font-size: 16px;
     position: relative;
     align-items: center;
@@ -576,6 +680,11 @@ body {
     bottom: 4px;
 }
 
+.breadcrumbs-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .breadcrumbs-link-to-main {
     display: block;
     padding: 0;
@@ -584,6 +693,26 @@ body {
     height: 12px;
     background: url(../images/icons/breadcrumbs-house.svg) center 100% no-repeat;
 }
+
+/* Состояния хлебных крошек*/
+.breadcrumbs-item:hover,
+.breadcrumbs-item:hover + .breadcrumbs-item::before {
+    opacity: 0.6;
+}
+
+.breadcrumbs-link:focus {
+    outline: none;
+}
+
+.breadcrumbs-item:active,
+.breadcrumbs-item:active + .breadcrumbs-item::before {
+    opacity: 0.3;
+}
+
+
+
+
+/*  Форма выбора гостиницы с фильтрами */
 
 .catalog-filter {
     display: flex;
@@ -600,17 +729,17 @@ body {
 }
 
 .catalog-filter-group {
+    position: relative;
     border: none;
     padding: 0;
     margin: 0;
-    min-width: 150px;
+    width: 150px;
     margin-right: 70px;
 }
 
 .catalog-filter-group:nth-child(2) {
     margin-right: 140px;
 }
-
 
 .catalog-filter-title {
     font-size: 20px;
@@ -621,28 +750,50 @@ body {
     margin-bottom: 32px;
 }
 
+/* Чекбоксы, радио кнопки и их состояния */
+
 .control {
     font-size: 18px;
     line-height: 23px;
     position: relative;
+    cursor: pointer;
+}
+
+.control-input {
+    margin: 0 18px 0 0;
+    opacity: 0;
 }
 
 .control::before {
     content: '';
     position: absolute;
-    min-width: 20px;
-    min-height: 20px;
+    width: 20px;
+    height: 20px;
     background-color: #FFFFFF;
     border-radius: 4px;
     left: -35px;
     top: 2px;
 }
 
+.control-input:hover + .control::before {
+    opacity: 0.6;
+}
+
+.control-input:focus + .control::before {
+    outline: 3px solid #83B3D3;
+}
+
+.control-input:active + .control::before {
+    outline: none;
+    opacity: 0.3;
+}
+
+
 .control-input:checked + .control::after {
     content: '';
     position: absolute;
-    min-width: 12.2px;
-    min-height: 10px;
+    width: 12.2px;
+    height: 10px;
     background: url(../images/icons/checkbox-checker.svg) no-repeat;
     border-radius: 50%;
     left: -31px;
@@ -652,8 +803,8 @@ body {
 .control-radio::before {
     content: '';
     position: absolute;
-    min-width: 20px;
-    min-height: 20px;
+    width: 20px;
+    height: 20px;
     background-color: #FFFFFF;
     border-radius: 50%;
     left: -35px;
@@ -662,35 +813,53 @@ body {
 .control-input:checked + .control-radio::after {
     content: '';
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
+    width: 10px;
+    height: 10px;
     background-color: #3F5E72;
     border-radius: 50%;
     left: -30px;
     top: 7px;
 }
 
-.control-input {
-    margin: 0 18px 0 0;
+/* Состояния установленного флажка у чекбоксов и радио кнопок */
+
+.control-input:hover + .control::after {
+    opacity: 0.6;
 }
 
+.control-input:active + .control::after {
+    opacity: 0.6;
+}
+
+
+/* Класс для работы с полями ввода уровней цены и полосой "Range"*/
 .cost-filter {
-    min-width: 288px;
-    position: relative;
+    width: 288px;
 }
 
-.cost-filter .catalog-filter-group {
-    display: flex;
-}
-
+/* Стилизация поля ввода цены и его состояния*/
 .cost-input {
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
     width: 143px;
-    /* Вопрос, почему не работает min-width и min-height */
     height: 48px;
+    background-color: #F2F2F2;
     border: none;
     border-radius: 4px 0 0 4px;
-    padding-left: 20px;
+    padding: 0 20px;
     position: relative;
+}
+
+.cost-input:hover {
+    background-color: #E6E6E6;
+}
+
+.cost-input:focus {
+    outline: 3px solid rgba(131, 179, 211, 1);
+    background-color: #E6E6E6;
+    ;
 }
 
 .min-cost-label::before {
@@ -721,19 +890,11 @@ body {
     left: 145px;
 }
 
-.cost-filter input[type="text"] {
-    font-family: inherit;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    background: #F2F2F2;
-}
-
 .cost-filter-wrapper {
     margin-bottom: 46px;
 }
 
-/* Range */
+/* Полоса "Range" и её состояния */
 .range-scale {
     position: relative;
     height: 4px;
@@ -767,18 +928,19 @@ body {
     right: 0;
 }
 
-
 .range-toggle:hover {
-    background-color: #dbb590;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:active,
 .range-toggle:focus {
-    outline: 3px solid #dbb590;
+    outline: 3px solid #83B3D3;
 }
 
+.range-toggle:active {
+    outline: 2px solid #83B3D3;
+}
 
-
+/* Кнопки формы выбора гостиницы и их состояния*/
 
 .filter-buttons {
     margin-top: 56px;
@@ -794,8 +956,22 @@ body {
     border-radius: 4px;
     background-color: #82B3D3;
     margin-bottom: 32px;
-
 }
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
+    background: #68A2CA;
+}
+
+.filter-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-button:disabled {
+    background-color: #E5E5E5;
+}
+
 
 .reset-button {
     font-family: inherit;
@@ -803,11 +979,30 @@ body {
     border: none;
 }
 
+.reset-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(130, 179, 211, 0);
+}
+
+.reset-button:focus {
+    background-color: rgba(130, 179, 211, 0);
+    outline: 3px solid rgba(131, 179, 211, 1);
+}
+
+.reset-button:active {
+    outline: none;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+.reset-button:disabled {
+    outline: none;
+    color: rgba(255, 255, 255, 0.1)
+}
+
 .search-result-container {
     display: flex;
     padding: 50px 70px 40px;
     align-items: center;
-
 }
 
 .search-result-title {
@@ -817,21 +1012,18 @@ body {
     line-height: 36px;
     text-transform: uppercase;
     color: #000000;
-    margin-right: 200px;
+    margin-right: auto;
 }
 
+/* Стилизация Select и его состояний */
 .cost-select {
-
+    appearance: none;
     background:
         url(../images/icons/chevron.svg) no-repeat 94%,
-        #F2F2F2;
-    ;
+        #FFFFFF;
     margin-right: 70px;
-}
-
-select[name="cost-level"] {
-    min-width: 292px;
-    min-height: 49px;
+    width: 292px;
+    height: 49px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     font-family: inherit;
@@ -839,26 +1031,50 @@ select[name="cost-level"] {
     line-height: 21px;
     color: #333333;
     padding-left: 18px;
-    appearance: none;
+    cursor: pointer;
+}
+
+.cost-select:hover {
+    outline: 2px solid rgba(104, 162, 202, 1);
+}
+
+.cost-select:focus {
+    outline: 2px solid rgba(104, 162, 202, 1);
+}
+
+.cost-select:active {
+    outline: 2px solid rgba(63, 94, 114, 1)
+}
+
+/* Вопрос: Или лучше просто через opacity: 0.3 ? */
+.cost-select:disabled {
+    color: rgba(0, 0, 0, 0.3);
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+    background:
+        url(../images/icons/chevron-disabled.svg) no-repeat 94%,
+        #F2F2F2;
 }
 
 .search-option {
     padding: 0;
 }
 
+/* Кнопки (иконки) выбора отображения экрана*/
 .search-result-display {
+    width: 160px;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    column-gap: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .display-button {
     text-decoration: none;
     display: block;
-    min-width: 48px;
-    min-height: 48px;
+    width: 48px;
+    height: 48px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     background: url(../images/icons/table-result.svg) no-repeat center;
@@ -874,6 +1090,17 @@ select[name="cost-level"] {
 
 .display-button-current {
     border: 2px solid #000000;
+}
+
+/* Вопрос: Имеет ли смысл прописывать состояние для :active? */
+.display-button:focus {
+    outline: none;
+    border-color: #68A2CA;
+    ;
+}
+
+.display-button:hover {
+    border-color: #000000;
 }
 
 .cards-container {
@@ -935,7 +1162,6 @@ select[name="cost-level"] {
     margin-bottom: 16px;
 }
 
-
 .button.link-button-more {
     min-width: 140px;
 }
@@ -943,12 +1169,23 @@ select[name="cost-level"] {
 .button-in-favourites {
     font-family: inherit;
     min-width: 140px;
+    /* Почему с просто width растягивается*/
     font-size: 16px;
     line-height: 20px;
     background-color: #82B3D3;
     border: none;
 }
 
+.button-in-favourites:hover,
+.button-in-favourites:focus {
+    background-color: #68A2CA;
+}
+
+.button-in-favourites:active {
+    background-color: #82B3D3;
+}
+
+/* Кнопка карточки "В Избранном" и её состояния */
 .added-in-favourites {
     min-width: 140px;
     background-color: #7DB54F;
@@ -956,7 +1193,16 @@ select[name="cost-level"] {
     font-family: inherit;
 }
 
+.added-in-favourites:hover,
+.added-in-favourites:focus {
+    background-color: rgba(108, 158, 66, 1)
+}
 
+.added-in-favourites:active {
+    background-color: #7DB54F;
+}
+
+/* Стилизация рейтинга по звёздам и слова рейтинг в виде кнопки */
 .rating-container {
     display: flex;
     justify-content: space-between;
@@ -971,16 +1217,19 @@ select[name="cost-level"] {
     background: url(../images/icons/star.svg) center no-repeat;
 }
 
-.rating-button {
+.button.rating-button {
     min-width: 140px;
     margin: 0;
     font-weight: 400;
     color: #333333;
     background-color: #F2F2F2;
+    cursor: default;
 }
 
+/* Стилизация пигинации и её состояний*/
 .pagination-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     border-top: 1px solid #E6E6E6;
     padding: 40px 0 60px;
@@ -992,10 +1241,8 @@ select[name="cost-level"] {
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.pagination-item {
-    margin-right: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .pagination-link {
@@ -1012,7 +1259,27 @@ select[name="cost-level"] {
 
 }
 
+.pagination-link:hover {
+    background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+    background-color: #68A2CA;
+    outline: none;
+}
+
+.pagination-link:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-current {
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.pagination-current:hover,
+.pagination-current:focus {
     color: #000000;
     background-color: #F2F2F2;
 }
@@ -1056,4 +1323,364 @@ select[name="cost-level"] {
 .subscription-catalog .field::placeholder {
     color: #000000;
     opacity: 0.6;
+
+}
+
+/* Модальное онко */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.80);
+    z-index: 2;
+}
+
+.modal-window {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+    margin: auto;
+    width: 717px;
+    padding: 64px 70px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.35);
+}
+
+
+.modal-window-search {
+    min-width: 577px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-window-title {
+    margin: 0;
+    margin-bottom: 64px;
+    padding: 0;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+/* Кнопка закрытия модального окна и её состояния */
+.modal-close-button {
+    margin: 0;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background-image: url(../images/icons/close-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px;
+    right: -18px;
+    cursor: pointer;
+}
+
+.modal-close-button:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+    outline: none;
+    background-color: #E6E6E6;
+    opacity: 0.3;
+}
+
+/* Поля ввода дат и их состояния */
+.input-date-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.input-date-internal-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.input-label-date {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-right: auto;
+}
+
+.modal-input-date {
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 24px;
+    width: 440px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background:
+        url(../images/icons/input-date-icon.svg) no-repeat 95% 50%,
+        #F2F2F2;
+    outline: none;
+    position: relative;
+}
+
+.modal-input-date::placeholder {
+    color: #000000;
+    opacity: 0.6;
+}
+
+.modal-input-date:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-input-date:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.input-information-error {
+    font-weight: 400;
+    margin: 0 0 0 157px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.error-date {
+    color: #FF5757;
+}
+
+/* Поля для ввода колличества гостей*/
+.guest-selection-container {
+    display: flex;
+    margin-bottom: 48px;
+    z-index: 1;
+}
+
+.guest-selection:first-child {
+    margin-right: 88px;
+}
+
+.guest-selection {
+    width: 247px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-number-guest-title {
+    margin-right: 46px;
+}
+
+.modal-input-number {
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 20px;
+    width: 110px;
+    padding: 14px 0;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    outline: none;
+}
+
+/* Кнопкa '-' */
+.button-decrease-guest {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 146px;
+    top: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-decrease-guest::after {
+    content: '';
+    width: 14px;
+    border: 1px solid rgba(117, 97, 87, 0.3);
+    position: absolute;
+    left: 3px;
+    top: 9px
+}
+
+/* Кнопка '+' */
+.button-increase-guest {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-increase-guest::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    border: 1px solid rgba(117, 97, 87, 0.3);
+    position: absolute;
+    left: 3px;
+}
+
+.button-increase-guest::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    border: 1px solid rgba(117, 97, 87, 0.3);
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    transform: rotate(90deg);
+}
+
+/* Состояния для кнопок '-' '+'  */
+.button-decrease-guest:hover::after,
+.button-decrease-guest:focus::after {
+    border: 1px solid #000000;
+}
+
+.button-decrease-guest:focus,
+.button-increase-guest:focus {
+    outline: 3px solid #82B3D3;
+}
+
+.button-increase-guest:hover::after,
+.button-increase-guest:hover::before,
+.button-increase-guest:focus::after,
+.button-increase-guest:focus::before {
+    border: 1px solid #000000;
+}
+
+.button-decrease-guest:active::after,
+.button-increase-guest:active::after,
+.button-increase-guest:active::before {
+    border: 1px solid rgba(117, 97, 87, 0.3);
+}
+
+.button-decrease-guest:active,
+.button-increase-guest:active {
+    outline: none;
+}
+
+/* Расстояние между инпутом и тултипом */
+.guest-selection-kids .input-number-guest-title {
+    margin-right: 10px;
+}
+
+/* Тултип */
+.input-number-guest {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.tooltip-toggle {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: auto;
+    color: #E5E5E5;
+    width: 26px;
+    height: 26px;
+    background-color: #83B3D3;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.tooltip-toggle:focus {
+    outline: none;
+}
+
+
+.tooltip-text {
+    position: absolute;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    text-transform: none;
+    padding: 15px 18px 18px 22px;
+    border-radius: 10px;
+    width: 256px;
+    top: 54px;
+    right: 45px;
+    z-index: 1;
+    display: none;
+}
+
+.tooltip-text::before {
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 9px;
+    background: url(../images/icons/tooltop-arrow.svg) no-repeat;
+    top: -9px;
+    left: 115px;
+}
+
+/* Вопрос почему не срабатывает наведение и фокус на кнопку */
+.tolltip-place:hover + .tooltip-text,
+.tolltip-place:focus + .tooltip-text {
+    display: block;
+}
+
+/* Кнопка отправки формы и её состояния */
+.modal-submit-button {
+    font-family: inherit;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #83B3D3;
+    cursor: pointer;
+}
+
+.modal-submit-button:hover {
+    background-color: #68A2CA;
+}
+
+.modal-submit-button:focus {
+    background-color: #68A2CA;
+    outline: none;
+}
+
+.modal-submit-button:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.3);
 }
