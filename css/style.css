@@ -63,7 +63,6 @@ body {
 
 .page-header {
     display: flex;
-    height: 64px;
     margin: 0;
     z-index: 1
 }
@@ -71,6 +70,11 @@ body {
 .logo {
     display: block;
     margin: 0 44px 0 70px;
+    margin-bottom: -6px;
+}
+
+.logo img {
+    display: block;
 }
 
 .navigation {
