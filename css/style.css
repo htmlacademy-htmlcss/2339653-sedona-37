@@ -652,6 +652,7 @@ body {
     color: #FFFFFF;
     background-color: #8daab8;
     background: url(../images/catalog-hero.png) no-repeat;
+background-size: cover;
 }
 
 .catalog-title {
@@ -701,7 +702,7 @@ body {
 
 /* Состояния хлебных крошек*/
 .breadcrumbs-item:hover {
-    color: rgba(255, 255, 255, 0.6);
+    opacity: 0.6;
 }
 
 .breadcrumbs-link:focus {
@@ -709,13 +710,14 @@ body {
 }
 
 .breadcrumbs-item:active {
-    color: rgba(255, 255, 255, 0.3);
+    opacity: 0.3;
 }
 
 /*  Форма выбора гостиницы с фильтрами */
 
 .catalog-filter {
     display: flex;
+    justify-content: space-between;
 }
 
 .catalog-filter-list {
@@ -728,17 +730,17 @@ body {
     margin: 0 0 16px 0;
 }
 
+.filter-block-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
 .catalog-filter-group {
     position: relative;
     border: none;
     padding: 0;
     margin: 0;
-    width: 150px;
-    margin-right: 70px;
-}
-
-.catalog-filter-group:nth-child(2) {
-    margin-right: 140px;
 }
 
 .catalog-filter-title {
@@ -787,7 +789,6 @@ body {
     outline: none;
     opacity: 0.3;
 }
-
 
 .control-input:checked + .control::after {
     content: '';

@@ -64,6 +64,9 @@
           </section>
           <section class="filter">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
+              <div class="filter-block-wrapper">
+
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -110,7 +113,8 @@
                   </li>
                 </ul>
               </fieldset>
-
+            </div>
+            <div class="filter-block-wrapper">
               <fieldset class="catalog-filter-group cost-filter">
                 <div class="cost-filter-wrapper">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
@@ -119,7 +123,6 @@
                   <label aria-label="Максимальная цена" class="max-cost-label" for="max-cost"></label>
                   <input class="cost-input" type="text" name="max-cost" id="max-cost" value="9000">
                 </div>
-
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 226px">
@@ -132,14 +135,13 @@
                     </div>
                   </div>
                 </div>
-
               </fieldset>
-
               <div class="filter-buttons">
                 <button class="button filter-button" type="submit">Применить</button>
                 <button class="button reset-button" type="reset">Сбросить</button>
               </div>
-            </form>
+            </div>
+          </form>
           </section>
         </div>
         <section class="search-result">
