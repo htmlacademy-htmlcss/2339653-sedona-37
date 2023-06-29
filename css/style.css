@@ -59,19 +59,22 @@ body {
     margin: 0 auto;
     background-color: #FFFFFF;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
 }
 
 .page-header {
     display: flex;
-    height: 64px;
     margin: 0;
+    z-index: 1
 }
 
 .logo {
     display: block;
     margin: 0 44px 0 70px;
-    position: relative;
+    margin-bottom: -6px;
+}
+
+.logo img {
+    display: block;
 }
 
 .navigation {
@@ -168,7 +171,7 @@ body {
 .button {
     display: inline-block;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 15px;
     border-radius: 4px;
     min-width: 160px;
     min-height: 36px;
@@ -180,6 +183,10 @@ body {
     text-transform: uppercase;
     background-color: #756157;
     cursor: pointer;
+}
+
+.modal-window-open {
+    max-width: 160px;
 }
 
 .button:hover,
@@ -258,9 +265,10 @@ body {
     display: block;
     height: 2px;
     background-color: rgba(0, 0, 0, 0.3);
-    min-width: 60px;
+    width: 60px;
     top: 86px;
-    left: 170px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .advantages-item-descr {
@@ -275,26 +283,25 @@ body {
 }
 
 .advantages-item {
-    min-width: 400px;
+    width: 400px;
     min-height: 385px;
     margin: 0 auto;
     padding: 0;
 }
 
 .advantages-item-content {
-    padding: 112px 0 50px;
+    width: 400px;
+    height: 100%;
+    padding: 50px 25px;
     align-items: center;
-}
-
-.advantages-item-extended .advantages-item-content {
-    min-width: 400px;
-    padding-top: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .advantages-item-extended {
-    min-width: 1200px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -324,8 +331,6 @@ body {
 }
 
 .advantages-item-extended .advantages-item-title::after {
-    top: 86px;
-    left: 170;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -343,10 +348,10 @@ body {
 }
 
 .featurtes-item {
-    min-width: 400px;
+    width: 400px;
     min-height: 385px;
     margin: 0;
-    padding: 183px 0 50px;
+    padding: 183px 25px 50px;
 }
 
 .featurtes-title {
@@ -387,29 +392,25 @@ body {
     height: 72px;
     background-image: url(../images/icons/housing.svg);
     bottom: 56px;
-    left: 164px;
+    left: 50%;
+    transform: translate(-50%, 0)
 }
 
 .features-food .featurtes-item-title::before {
     width: 74px;
     height: 70px;
     background-image: url(../images/icons/food.svg);
-    bottom: 57px;
-    left: 164px;
 }
 
 .features-souvenir .featurtes-item-title::before {
     width: 64px;
     height: 76px;
     background-image: url(../images/icons/souvenir.svg);
-    bottom: 54px;
-    left: 168px;
 }
 
 .featurtes-item-descr {
     text-align: center;
     margin: 0 auto;
-
 }
 
 .hotel-search {
@@ -417,7 +418,8 @@ body {
 }
 
 .hotel-search-title {
-    margin: 0;
+    width: 600px;
+    margin: 0 auto;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -428,7 +430,8 @@ body {
 }
 
 .hotel-search-descr {
-    margin: 0;
+    width: 700px;
+    margin: 0 auto;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
@@ -436,8 +439,8 @@ body {
 }
 
 .hotel-search-button {
-    padding: 0 50px;
-    max-width: 592px;
+    padding: 8px 50px;
+    max-width: 600px;
     min-height: 52px;
     display: block;
     margin: 0 auto;
@@ -452,36 +455,38 @@ body {
     min-height: 415px;
     background-color: #8daab8;
     background: url(../images/subscribe-background.jpg) no-repeat;
+    background-size: cover;
     color: #FFFFFF;
     text-align: center;
     border-top: 1px solid transparent;
 }
 
 .subscription-title {
+    max-width: 600px;
+    margin: 0 auto 20px;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
-    margin: 0;
-    margin-bottom: 20px;
 }
 
 .subscription-descr {
-    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
     font-size: 22px;
     line-height: 26px;
     margin-bottom: 54px;
 }
 
+
+/* Поле ввода секции подписки и его состояния */
 .field-wrapper {
     width: 684px;
     position: relative;
     margin: 0 auto;
 }
-
-/* Поле ввода секции подписки и его состояния */
 
 .field {
     font-family: inherit;
@@ -695,22 +700,17 @@ body {
 }
 
 /* Состояния хлебных крошек*/
-.breadcrumbs-item:hover,
-.breadcrumbs-item:hover + .breadcrumbs-item::before {
-    opacity: 0.6;
+.breadcrumbs-item:hover {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .breadcrumbs-link:focus {
     outline: none;
 }
 
-.breadcrumbs-item:active,
-.breadcrumbs-item:active + .breadcrumbs-item::before {
-    opacity: 0.3;
+.breadcrumbs-item:active {
+    color: rgba(255, 255, 255, 0.3);
 }
-
-
-
 
 /*  Форма выбора гостиницы с фильтрами */
 
@@ -975,17 +975,17 @@ body {
 
 .reset-button {
     font-family: inherit;
-    background-color: rgba(130, 179, 211, 0);
+    background-color: transparent;
     border: none;
 }
 
 .reset-button:hover {
     color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(130, 179, 211, 0);
+    background-color: transparent;
 }
 
 .reset-button:focus {
-    background-color: rgba(130, 179, 211, 0);
+    background-color: transparent;
     outline: 3px solid rgba(131, 179, 211, 1);
 }
 
@@ -1112,54 +1112,45 @@ body {
     margin: 0;
     margin-bottom: 40px;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
     gap: 20px;
 }
 
 .card-hotel-item {
     margin: 0;
-    width: 340px;
-    /* Вопрос: Почему не вмещается с min-width */
     padding: 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    gap: 16px 20px
 }
 
 .card-hotel-link {
     text-decoration: none;
     display: block;
+    grid-column: -1 / 1;
 }
 
 .card-hotel-img {
     display: block;
-    margin-bottom: 16px;
 }
 
 .card-hotel-title {
     margin: 0;
-    padding: 0;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
     color: #000000;
-    margin-bottom: 16px;
 }
 
 .hotel-card-info {
+    grid-column: -1 / 1;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
-}
-
-.button-container {
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
 }
 
 .button.link-button-more {
@@ -1169,7 +1160,6 @@ body {
 .button-in-favourites {
     font-family: inherit;
     min-width: 140px;
-    /* Почему с просто width растягивается*/
     font-size: 16px;
     line-height: 20px;
     background-color: #82B3D3;
@@ -1203,10 +1193,8 @@ body {
 }
 
 /* Стилизация рейтинга по звёздам и слова рейтинг в виде кнопки */
-.rating-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.star-rating {
+    align-self: center;
 }
 
 .active {
@@ -1246,17 +1234,19 @@ body {
 }
 
 .pagination-link {
+    font-size: 20px;
+    line-height: 36px;
     font-weight: 700;
     text-decoration: none;
     color: #FFFFFF;
     min-width: 60px;
     min-height: 60px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
     background-color: #82B3D3;
-
 }
 
 .pagination-link:hover {
@@ -1289,8 +1279,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
-    margin-right: 8px;
+    margin: 0 8px;
     min-width: 60px;
     min-height: 60px;
 }
