@@ -111,6 +111,34 @@ body {
     text-underline-position: under;
 }
 
+.navigation-link:hover {
+    color: #756157;
+}
+
+.navigation-link:focus {
+    color: #756157;
+    outline: none;
+}
+
+.navigation-link:active {
+    color: rgba(117, 97, 87, 0.3);
+}
+
+
+.navigation-user .navigation-link:hover {
+    fill: #756157;
+}
+
+.navigation-user .navigation-link:focus {
+    fill: #756157;
+    outline: none;
+}
+
+.navigation-user .navigation-link:active {
+    fill: rgba(117, 97, 87, 0.3);
+}
+
+
 .navigation-item {
     margin: auto 32px auto 0;
 }
@@ -128,23 +156,12 @@ body {
 }
 
 .navigation-user .navigation-item:first-child {
-    width: 20px;
-    height: 20px;
-    background-image: url(../images/icons/search-icon.svg);
-    background-repeat: no-repeat;
-    background-size: 19px 19px;
-    background-position: center right;
+    align-items: center;
     margin-right: 25px;
 }
 
 .navigation-user .navigation-item:nth-child(2) {
     position: relative;
-    min-width: 20px;
-    min-height: 20px;
-    background-image: url(../images/icons/heart-favorites.svg);
-    background-repeat: no-repeat;
-    background-size: 18px 17px;
-    background-position: center;
     margin-right: 32px;
 }
 
@@ -652,7 +669,7 @@ body {
     color: #FFFFFF;
     background-color: #8daab8;
     background: url(../images/catalog-hero.png) no-repeat;
-background-size: cover;
+    background-size: cover;
 }
 
 .catalog-title {
@@ -761,6 +778,14 @@ background-size: cover;
     cursor: pointer;
 }
 
+.control:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.control:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .control-input {
     margin: 0 18px 0 0;
     opacity: 0;
@@ -836,6 +861,9 @@ background-size: cover;
 /* Класс для работы с полями ввода уровней цены и полосой "Range"*/
 .cost-filter {
     width: 288px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 46px;
 }
 
 /* Стилизация поля ввода цены и его состояния*/
@@ -869,7 +897,7 @@ background-size: cover;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 69px;
+    top: 12px;
     left: 107px;
     z-index: 1;
 }
@@ -880,7 +908,7 @@ background-size: cover;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 69px;
+    top: 12px;
     left: 249px;
     z-index: 1;
 }
@@ -891,9 +919,7 @@ background-size: cover;
     left: 145px;
 }
 
-.cost-filter-wrapper {
-    margin-bottom: 46px;
-}
+.cost-filter-wrapper {}
 
 /* Полоса "Range" и её состояния */
 .range-scale {
@@ -1144,6 +1170,19 @@ background-size: cover;
     line-height: 28px;
     font-weight: 700;
     color: #000000;
+}
+
+.card-hotel-title:hover {
+    color: #756157;
+}
+
+.card-hotel-title:focus {
+    color: #756157;
+    outline: none;
+}
+
+.card-hotel-title:active {
+    color: rgba(117, 97, 87, 0.3);
 }
 
 .hotel-card-info {
