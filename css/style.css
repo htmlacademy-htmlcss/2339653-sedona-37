@@ -185,7 +185,7 @@ body {
     cursor: pointer;
 }
 
-.modal-window-open {
+.modal-window-open-button {
     max-width: 160px;
 }
 
@@ -1673,4 +1673,9 @@ background-size: cover;
 .modal-submit-button:active {
     background-color: #68A2CA;
     color: rgba(255, 255, 255, 0.3);
+}
+
+/* Класс для открытия модально окна*/
+.modal-window-open {
+    display: flex;
 }
