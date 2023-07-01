@@ -489,7 +489,7 @@ body {
   min-height: 415px;
   background:
     url("../images/subscribe-background.jpg") no-repeat,
-    #8daab8;
+    rgba(56, 155, 221, 0.3);
   background-size: cover;
   color: #ffffff;
   text-align: center;
@@ -686,7 +686,7 @@ body {
   padding: 35px 70px;
   color: #ffffff;
   background: url("../images/catalog-hero.jpg") no-repeat,
-    #8daab8;
+  rgba(56, 155, 221, 0.3);
   background-size: cover;
 }
 
