@@ -3,7 +3,8 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <title>Город Седона</title>
   </head>
@@ -36,13 +37,14 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#" aria-label="Избранное">
+              <a class="navigation-link navigation-link-favourites" href="#" aria-label="Избранное">
                 <svg width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
-                  <path id="Vector" d="M9.29282 17C8.99282 17 8.69282 16.9 8.49282 16.6C3.09282 10.5 1.79282 9.1 1.49282 8.7C0.792822 7.8 0.392822 6.6 0.392822 5.4C0.392822 2.4 2.79282 0 5.89282 0C7.19282 0 8.39282 0.5 9.39282 1.3C10.3928 0.5 11.6928 0 12.8928 0C15.8928 0 18.3928 2.4 18.3928 5.4C18.3928 6.7 17.8928 7.9 17.0928 8.8L10.0928 16.7C9.89282 16.9 9.69282 17 9.29282 17ZM3.29282 7.5C3.59282 7.9 6.79282 11.5 9.39282 14.4L15.5928 7.4C16.0928 6.9 16.2928 6.2 16.2928 5.4C16.2928 3.6 14.7928 2.1 12.9928 2.1C11.9928 2.1 10.9928 2.6 10.2928 3.4C9.99282 3.7 9.69282 3.8 9.39282 3.8C9.09282 3.8 8.79282 3.6 8.59282 3.4C7.89282 2.6 6.89282 2.1 5.89282 2.1C4.09282 2.1 2.59282 3.6 2.59282 5.4C2.49282 6.3 2.89282 7 3.29282 7.5C3.19282 7.5 3.19282 7.5 3.29282 7.5Z"/>
-                  </svg>
+                  <path id="Vector"
+                    d="M9.29282 17C8.99282 17 8.69282 16.9 8.49282 16.6C3.09282 10.5 1.79282 9.1 1.49282 8.7C0.792822 7.8 0.392822 6.6 0.392822 5.4C0.392822 2.4 2.79282 0 5.89282 0C7.19282 0 8.39282 0.5 9.39282 1.3C10.3928 0.5 11.6928 0 12.8928 0C15.8928 0 18.3928 2.4 18.3928 5.4C18.3928 6.7 17.8928 7.9 17.0928 8.8L10.0928 16.7C9.89282 16.9 9.69282 17 9.29282 17ZM3.29282 7.5C3.59282 7.9 6.79282 11.5 9.39282 14.4L15.5928 7.4C16.0928 6.9 16.2928 6.2 16.2928 5.4C16.2928 3.6 14.7928 2.1 12.9928 2.1C11.9928 2.1 10.9928 2.6 10.2928 3.4C9.99282 3.7 9.69282 3.8 9.39282 3.8C9.09282 3.8 8.79282 3.6 8.59282 3.4C7.89282 2.6 6.89282 2.1 5.89282 2.1C4.09282 2.1 2.59282 3.6 2.59282 5.4C2.49282 6.3 2.89282 7 3.29282 7.5C3.19282 7.5 3.19282 7.5 3.29282 7.5Z" />
+                </svg>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-button">
               <a class="button modal-window-open-button" href="#">Хочу сюда!</a>
             </li>
           </ul>
@@ -93,8 +95,7 @@
                 <p class="advantages-item-descr">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется</p>
               </div>
               <div class="img-size-regulator">
-                <img src="images/photo-last-advantages.jpg" width="800" height="385"
-                  alt="Фотография горного перехода">
+                <img src="images/photo-last-advantages.jpg" width="800" height="385" alt="Фотография горного перехода">
               </div>
             </li>
           </ul>
@@ -132,7 +133,7 @@
             <label class="visually-hidden" for="subscription-email">E-mail адрес</label>
             <div class="field-wrapper">
               <input class="field" type="email" name="subscription-email" id="subscription-email"
-                placeholder="Ваш e-mail">
+                placeholder="Ваш e-mail" required>
               <button class="subscription-button" type="submit">Подписаться</button>
             </div>
           </form>
@@ -208,12 +209,11 @@
             <button class="modal-close-button" type="button">
               <span class="visually-hidden">Закрыть</span>
             </button>
-
             <div class="input-date-container">
               <div class="input-date-internal-container">
                 <label class="input-label-date" for="input-arrival-date">Дата заезда:</label>
                 <input class="modal-input-date" type="text" id="input-arrival-date" name="nput-arrival-date"
-                  placeholder="Укажите дату">
+                  placeholder="Укажите дату" required>
               </div>
               <p class="input-information-error error-date">Мы не можем отправить вас в прошлое.</p>
             </div>
@@ -221,36 +221,35 @@
               <div class="input-date-internal-container">
                 <label class="input-label-date" for="input-departure-date">Дата выезда:</label>
                 <input class="modal-input-date" type="text" id="input-departure-date" name="nput-departure-date"
-                placeholder="Укажите дату">
+                  placeholder="Укажите дату" required>
               </div>
               <p class="input-information-error">На эти даты есть свободные номера. Пока есть.</p>
             </div>
-
             <div class="guest-selection-container">
               <div class="guest-selection guest-selection-adults">
                 <label class="input-number-guest-title" for="input-number-adults">Взрослые: </label>
-                <input class="modal-input-number" type="text" id="input-number-adults" value="2">
-                <button class="button-decrease-guest"><span class="visually-hidden">Меньше</span></button>
-                <button class="button-increase-guest"><span class="visually-hidden">Больше</span></button>
+                <input class="modal-input-number" type="text" id="input-number-adults" value="2" required>
+                <button class="button-decrease-guest" type="button"><span class="visually-hidden">Меньше</span></button>
+                <button class="button-increase-guest" type="button"><span class="visually-hidden">Больше</span></button>
               </div>
-
               <div class="guest-selection guest-selection-kids">
                 <span class="input-number-guest">
-                <label class="input-number-guest-title" for="input-number-kids">Дети:</label>
-                <span class="tolltip-place">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                    <svg class="tolltip-svg" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                  <label class="input-number-guest-title" for="input-number-kids">Дети:</label>
+                  <span class="tolltip-place">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg class="tolltip-svg" width="2" height="12" viewBox="0 0 2 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
                       </svg>
-
-                  </button>
+                    </button>
+                  </span>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                    вами, возраст которых от 6 до 18 лет.
+                    Дети до 6 лет размещаются бесплатно.</span>
                 </span>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
-                  Дети до 6 лет размещаются бесплатно.</span>
-                </span>
-                <input class="modal-input-number" type="text" id="input-number-kids" value="2">
-                <button class="button-decrease-guest"><span class="visually-hidden">Меньше</span></button>
-                <button class="button-increase-guest"><span class="visually-hidden">Больше</span></button>
+                <input class="modal-input-number" type="text" id="input-number-kids" value="2" required>
+                <button class="button-decrease-guest" type="button"><span class="visually-hidden">Меньше</span></button>
+                <button class="button-increase-guest" type="button"><span class="visually-hidden">Больше</span></button>
               </div>
             </div>
             <button class="modal-submit-button" type="submit">Найти</button>
