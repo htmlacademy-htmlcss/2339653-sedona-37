@@ -122,7 +122,6 @@ body {
 
 .navigation-link:focus {
   color: #756157;
-  outline: none;
 }
 
 .navigation-link:active {
@@ -225,7 +224,7 @@ body {
 .button:hover,
 .button:focus {
   background-color: #615048;
-  outline: none;
+
 }
 
 .button:active {
@@ -586,7 +585,7 @@ body {
 .subscription-button:focus,
 .subscription-button:active {
   background: #68a2ca;
-  outline: none;
+
 }
 
 .subscription-button:active {
@@ -626,7 +625,7 @@ body {
 }
 
 .social-link:focus {
-  outline: none;
+
   fill: #68a2ca;
 }
 
@@ -650,7 +649,7 @@ body {
 
 .phone-link:focus {
   color: #756157;
-  outline: none;
+
 }
 
 .phone-link:active {
@@ -670,7 +669,7 @@ body {
 
 .link-to-academy:focus {
   fill: #756157;
-  outline: none;
+
 }
 
 .link-to-academy:active {
@@ -740,9 +739,6 @@ body {
   opacity: 0.6;
 }
 
-.breadcrumbs-link:focus {
-  outline: none;
-}
 
 .breadcrumbs-item:active {
   opacity: 0.3;
@@ -1138,7 +1134,6 @@ body {
   border: 2px solid #000000;
 }
 
-/* Вопрос: Имеет ли смысл прописывать состояние для :active? */
 .display-button:focus {
   outline: none;
   border-color: #68a2ca;
@@ -1198,7 +1193,7 @@ body {
 
 .card-hotel-title:focus {
   color: #756157;
-  outline: none;
+
 }
 
 .card-hotel-title:active {
@@ -1311,7 +1306,7 @@ body {
 
 .pagination-link:focus {
   background-color: #68A2CA;
-  outline: none;
+
 }
 
 .pagination-link:active {
@@ -1465,6 +1460,7 @@ body {
 }
 
 .input-label-date {
+  width: 137px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1519,6 +1515,7 @@ body {
 /* Поля для ввода колличества гостей*/
 .guest-selection-container {
   display: flex;
+  align-items: center;
   margin-bottom: 48px;
   z-index: 1;
 }
@@ -1535,6 +1532,7 @@ body {
 }
 
 .input-number-guest-title {
+  width: 130px;
   margin-right: 46px;
 }
 
@@ -1558,7 +1556,6 @@ body {
   height: 20px;
   position: absolute;
   left: 146px;
-  top: 14px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1580,7 +1577,6 @@ body {
   height: 20px;
   position: absolute;
   right: 8px;
-  top: 14px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1639,6 +1635,7 @@ body {
 /* Расстояние между инпутом и тултипом */
 .guest-selection-kids .input-number-guest-title {
   margin-right: 10px;
+  width: 50px;
 }
 
 /* Тултип */
@@ -1663,11 +1660,6 @@ body {
   z-index: 2;
 }
 
-.tooltip-toggle:focus {
-  outline: none;
-}
-
-
 .tooltip-text {
   position: absolute;
   background-color: #333333;
@@ -1680,7 +1672,7 @@ body {
   border-radius: 10px;
   width: 256px;
   top: 54px;
-  right: 45px;
+  right: 40px;
   z-index: 1;
   display: none;
 }
@@ -1723,7 +1715,7 @@ body {
 
 .modal-submit-button:focus {
   background-color: #68a2ca;
-  outline: none;
+
 }
 
 .modal-submit-button:active {
