@@ -1689,7 +1689,7 @@ body {
 
 /* Вопрос почему не срабатывает наведение и фокус на кнопку */
 .tolltip-place:hover + .tooltip-text,
-.tolltip-place:focus + .tooltip-text {
+.tolltip-place:focus-within + .tooltip-text {
   display: block;
 }
 

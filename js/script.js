@@ -21,7 +21,6 @@ modalForm.onclick = function(event) {
     event.stopPropagation();
 }
 
-
 // tooltip.addEventListener('focus', tooltipTextVisible);
 
 // function tooltipTextVisible() {
